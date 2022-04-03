@@ -23,7 +23,7 @@
 
 <script>
 import { ref } from "vue";
-// import { useStore } from "vuex";
+import { useStore } from "vuex";
 
 export default {
   setup() {
@@ -32,7 +32,10 @@ export default {
       { title: "...Then I Took an Arrow in the Knee", id: 2 },
       { title: "Mario vs Luigi, Ultimate Showdown", id: 3 },
     ]);
+  const store = useStore()
 
+  console.log(store.state.user)
+  
     return {
       blogs,
     };
